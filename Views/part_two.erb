@@ -1,11 +1,11 @@
-<h1> Welcome to the Career Path App!</h1>
-<strong> You are in highschool, you get to choose your path! </strong>
+<h1> <%= @title %> </h1>
 
 <form method= "POST" action="/">
 <select name="@choice">
 	<option> <%= @choice_1.upcase %> </option>
 	<option> <%= @choice_2.upcase %> </option>
 	<option> <%= @choice_3.upcase %> </option>
+
 </select>
 <br><br>
 <input type="submit">
