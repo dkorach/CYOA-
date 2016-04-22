@@ -2,10 +2,11 @@
 <strong> You are in highschool, you get to choose your path! </strong>
 
 <form method= "POST" action="/">
-<select name="@choice">
-	<option> <%= @choice_1.upcase %> </option>
-	<option> <%= @choice_2.upcase %> </option>
-	<option> <%= @choice_3.upcase %> </option>
+<select name= "choice" >
+	<option value= <%= @choice_1 %> > <%= @choice_1 %> </option>
+	<option value= <%= @choice_2 %> > <%= @choice_2 %> </option>
+	<option value= <%= @choice_3 %> > <%= @choice_3 %> </option>
+	<option value= <%= @choice_4 %> > <%= @choice_4 %> </option>
 </select>
 <br><br>
 <input type="submit">
