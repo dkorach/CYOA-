@@ -26,11 +26,19 @@ post '/' do
 	end
 
 	 if "Live with Parents" == params[:choice2]
-	 	@ending = "Have fun living with your parents"
+	 	@title = "Failure"
+	 	@ending = "Have fun living with your parents :("
+	 	@imagesource = "http://img.thesun.co.uk/aidemitlum/archive/01896/FamilyProbs_1896542a.jpg"
 		erb :ending
 	elsif "Get your GED" == params[:choice2]
+		@title = "Not bad considering the circumstances"
+		@ending = "You will work at a low payin job"
+		@imagesource = "https://media.glassdoor.com/o/432/mcdonald-s-office.jpg"
+		erb :ending
 	elsif "Community College" == params[:choice2]
-	elsif "4 Year University" == params[:choice2]
+		@choice1 = ""
+	elsif "4 Year University" == params[:choice2] 
+		@choice1 = "Graduate School"
 	elsif "Vocational School" == params[:choice2]
 	 	 
 			
