@@ -24,26 +24,25 @@ post '/' do
 		@choice_4 = "Vocational School"
 		erb :part_two
 	end
+end
 
-	 if "Live with Parents" == params[:choice2]
+post '/part_two' do
+	puts params[:choice]
+	 if "Live" == params[:choice]
 	 	@title = "Failure"
 	 	@ending = "Have fun living with your parents :("
-	 	@imagesource = "http://img.thesun.co.uk/aidemitlum/archive/01896/FamilyProbs_1896542a.jpg"
-		erb :ending
-	elsif "Get your GED" == params[:choice2]
+	 	erb :ending
+	elsif "Get your GED" == params[:choice]
 		@title = "Not bad considering the circumstances"
-		@ending = "You will work at a low payin job"
+		@ending = "You will work at a low paying job"
 		@imagesource = "https://media.glassdoor.com/o/432/mcdonald-s-office.jpg"
 		erb :ending
-	elsif "Community College" == params[:choice2]
+	elsif "Community College" == params[:choice]
 		@choice1 = ""
-	elsif "4 Year University" == params[:choice2] 
+	elsif "4 Year University" == params[:choice] 
 		@choice1 = "Graduate School"
-	elsif "Vocational School" == params[:choice2]
-	 	 
-			
-	 	
+	elsif "Vocational School" == params[:choice]
+	 	 	
 	 end
 end
 
-post '/part_two'
