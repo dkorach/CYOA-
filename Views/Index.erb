@@ -1,13 +1,22 @@
 <h1> Welcome to the Career Path App!</h1>
 <strong> You are in highschool, you get to choose your path! </strong>
 
+<h2> <%= @title %> </h2>
+<h2> <%= @ending %> </h2>
+
+<% if @choices %>
+
 <form method= "POST" action="/">
 <select name= "choice" >
-	<option value= <%= @choice_1 %> > <%= @choice_1 %> </option>
-	<option value= <%= @choice_2 %> > <%= @choice_2 %> </option>
-	<option value= <%= @choice_3 %> > <%= @choice_3 %> </option>
-	<option value= <%= @choice_4 %> > <%= @choice_4 %> </option>
+
+	<% @choices.each do |choices| %> 
+	<option value= <%= choices %> > <%= choices %> </option>
+	<% end %>
+
 </select>
 <br><br>
 <input type="submit">
 </form>
+
+<% end %>
+
